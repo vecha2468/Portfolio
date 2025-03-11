@@ -11,11 +11,13 @@ pipeline {
         }
         stage('Deploy - Staging') {
     steps {
+        sh 'chmod +x deploy_staging.sh'
         sh './deploy_staging'
     }
-}
-stage('Deploy - Production') {
+    }
+  stage('Deploy - Production') {
     steps {
+        sh 'chmod +x deploy_production.sh'
         sh './deploy_production'
     }
 }
