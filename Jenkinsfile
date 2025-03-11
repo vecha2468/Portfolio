@@ -1,13 +1,9 @@
 pipeline {
-    agent any
+    agent any  // Runs on any available Jenkins agent
     stages {
-        stage('Build') {
+        stage('Test') {
             steps {
-                sh 'echo "Hello World"'
-                sh '''
-                    echo "Multiline shell steps works too"
-                    ls -lah
-                '''
+                sh 'node --eval "console.log(process.arch, process.platform)"'
             }
         }
     }
