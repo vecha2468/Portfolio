@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'node:22.14.0-alpine3.21' } }
+    agent any  // Runs on any available Jenkins agent
     stages {
         stage('build') {
             steps {
-                sh 'node --version'
+                sh 'node --version'  // Assumes Node.js is installed on the agent
             }
         }
     }
