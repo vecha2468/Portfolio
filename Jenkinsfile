@@ -12,13 +12,13 @@ pipeline {
         stage('Deploy - Staging') {
     steps {
         sh 'chmod +x deploy_staging.sh'
-        sh './deploy_staging'
+        sh './deploy_staging.sh'
     }
     }
   stage('Deploy - Production') {
     steps {
         sh 'chmod +x deploy_production.sh'
-        sh './deploy_production'
+        sh './deploy_production.sh'
     }
 }
     }
