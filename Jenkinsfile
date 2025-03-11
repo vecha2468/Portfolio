@@ -1,9 +1,13 @@
 pipeline {
-    agent any  // Runs on any available Jenkins agent
+    agent any
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                sh '/Users/vejandlachanukya/.nvm/versions/node/v18.19.0/bin/node'  // Assumes Node.js is installed on the agent
+                sh 'echo "Hello World"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
             }
         }
     }
