@@ -11,12 +11,12 @@ pipeline {
         }
         stage('Deploy - Staging') {
     steps {
-        sh './deploy staging'
+        sh './deploy_staging'
     }
 }
 stage('Deploy - Production') {
     steps {
-        sh './deploy production'
+        sh './deploy_production'
     }
 }
     }
