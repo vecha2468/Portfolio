@@ -1,9 +1,9 @@
 pipeline {
-    agent any  // Runs on any available Jenkins agent
+    agent any
     stages {
         stage('Test') {
             steps {
-                sh 'node --eval "console.log(process.arch, process.platform)"'
+                sh '/Users/vejandlachanukya/.nvm/versions/node/v18.19.0/bin/node --eval "console.log(process.arch, process.platform)"'
             }
         }
     }
