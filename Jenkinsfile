@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'node --version'  // Assumes Node.js is installed on the agent
+                sh '/Users/vejandlachanukya/.nvm/versions/node/v18.19.0/bin/node'  // Assumes Node.js is installed on the agent
             }
         }
     }
